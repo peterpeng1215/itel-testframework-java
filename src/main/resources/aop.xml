@@ -1,0 +1,8 @@
+<aspectj>
+    <aspects>
+        <aspect name="com.baeldung.aspectj.AccountAspect"/>
+        <weaver options="-verbose -showWeaveInfo">
+            <include within="aj.*"/>
+        </weaver>
+    </aspects>
+</aspectj>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Default suite"  verbose="3" parallel="classes" thread-count="5">
+	<listeners>
+		<listener class-name="com.itest4u.itel.TestNGListener">
+		</listener>
+	</listeners>
+	<test name="Allure reporting with TestNG tests" skipfailedinvocationcounts="false">
+<!--		<packages>-->
+<!--			<package name="com.itest4u.testing" />-->
+<!--		</packages>-->
+		<classes>
+			<class	name="com.itest4u.testing.Testcase_RestAPISample2">
+			</class>
+		</classes>
+<!--&lt;!&ndash;				<methods>&ndash;&gt;-->
+<!--&lt;!&ndash;					<include name="searchWikipedia" />&ndash;&gt;-->
+<!--&lt;!&ndash;				</methods>&ndash;&gt;-->
+<!--			</class>-->
+<!--&lt;!&ndash;			<class&ndash;&gt;-->
+<!--&lt;!&ndash;				name="com.codelabs.examples.selenium.tests.TC_PercentageCalculatorTest">&ndash;&gt;-->
+<!--&lt;!&ndash;				<methods>&ndash;&gt;-->
+<!--&lt;!&ndash;					<include name="checkPercentageCalculation" />&ndash;&gt;-->
+<!--&lt;!&ndash;				</methods>&ndash;&gt;-->
+<!--&lt;!&ndash;			</class>&ndash;&gt;-->
+<!--		</classes>-->
+	</test>
+</suite>

@@ -59,18 +59,17 @@ public class Testcase_RestAPISample2 {
 ////            saveScreenshot(m);
 ////        });
         element.click();
-        puppeteer.waitForTimeout(3000);
         puppeteer.type("#ac-gn-searchform-input","iphone 12\n");
         puppeteer.waitForSelector(".as-search-results-count");
-        puppeteer.waitForTimeout(3000);
         List<IPuppeteerElement> pes =  puppeteer.findElements(".as-explore-product");
-        pes.forEach(e -> System.out.println(e.innerHTML()));
 
-
-        IPuppeteerElement[] pes3 =  puppeteer.findElements3(".as-explore-product");
-        IPuppeteerElement pe = pes3[0];
-        pe.click();
-        Arrays.stream(pes3).forEach(IPuppeteerElement::click);
+//        pes.forEach(e -> System.out.println(e.innerHTML()));
+//
+//
+//        IPuppeteerElement[] pes3 =  puppeteer.findElements3(".as-explore-product");
+//        IPuppeteerElement pe = pes3[0];
+//        pe.click();
+//        Arrays.stream(pes3).forEach(IPuppeteerElement::click);
 //        IPuppeteerElementCollection pes2 =  puppeteer.findElements2(".as-explore-product");
 //        pes2.get(0).click();
 //        puppeteer.click("#ac-gn-link-search");

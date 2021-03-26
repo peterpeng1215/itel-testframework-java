@@ -80,7 +80,7 @@ public class GenericResourceAgent {
 
     private RequestSpecification base(boolean... args) {
 //        filter(new AllureRestAssured() ).
-        RequestSpecification myBase = given().filter(new AllureRestAssured() ).baseUri(BaseURL).header("Content-Type", "application/json");
+        RequestSpecification myBase = given().baseUri(BaseURL).header("Content-Type", "application/json");
         if (args.length > 0) {
             for (Map.Entry<String, String> h : custom_headers.entrySet()) {
                 myBase.header(h.getKey(), h.getValue());
@@ -204,5 +204,20 @@ public class GenericResourceAgent {
             return null;
         }
 
+    }
+    @Override
+    protected void finalize() throws Throwable
+    {
+
+        try {
+            System.out.println("finalizing...");
+            base().delete(remoteObj);
+
+        } catch (Exception e) {
+            System.out.println("finalized failed" + e);
+
+            e.printStackTrace();
+
+        }
     }
 }
